@@ -35,11 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
             //this for handle set value to text view
 
-            tv_name.setText(student_json.getString("name"));
-
+            tv_name.setText("Name : "+student_json.getString("name"));
             JSONObject jo_address = (JSONObject) student_json.get("address");
-            tv_city.setText(jo_address.getString("city"));
-            tv_province.setText(jo_address.getString("province"));
+            tv_city.setText("City : "+jo_address.getString("city"));
+            tv_province.setText("Province : "+jo_address.getString("province"));
 
         } catch (JSONException e) {
             Log.i("info", String.valueOf(e));
